@@ -7,7 +7,6 @@ const db = require('../config/db');
  * @param res the callback response.
  */
 exports.add = (req, res) => {
-    console.log(req.body)
     if (!req.body.name || !req.body.stock) {
         res.status(400).send({ message: "Product fields can't be empty." });
     } else {
@@ -101,7 +100,7 @@ exports.getByName = (req, res) => {
  * @param req the request.
  * @param res the callback response.
  */
-exports.updateStock = function (req, res) {
+exports.updateStock = (req, res) => {
     db.connection.query('UPDATE products SET stock = ? WHERE name = ?', [req.body.stock, req.params.name], (err, rows, fields) => {
         if (err) {
             console.log(err);
@@ -118,7 +117,7 @@ exports.updateStock = function (req, res) {
  * @param req the request.
  * @param res the callback response.
  */
-exports.delete = function (req, res) {
+exports.delete = (req, res) => {
     db.connection.query('DELETE FROM products WHERE name = ?', [req.params.name], (err, rows, fields) => {
         if (err) {
             console.log(err);
