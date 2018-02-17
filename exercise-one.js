@@ -17,7 +17,7 @@ const calculateSundays = (from, to) => {
 
     // Iterate through the years.
     while (year <= to) {
-        // If the month equals 12 which will be December, resets the months and sums 1 year
+        // If the month equals 12 it means that it has already evaluated from 0 to 11, resets the months and sums 1 year
         if (month == 12) {
             month = 0;
             year++;
