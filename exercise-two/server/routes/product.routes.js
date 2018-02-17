@@ -2,9 +2,8 @@ const productController = require('../controllers/product.controller');
 
 module.exports = (app) => {
     // Default path.
-    app.get('/', (req, res) => {
-        res.json({ "message": "Welcome" });
-    });
+    app.get('/', (req, res) => {res.json({ "message": "Welcome" })});
+    
     // Add a new product.
     app.post('/products', productController.add);
 

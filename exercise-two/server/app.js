@@ -1,6 +1,5 @@
 const consts = require('./config/constants.js');
 const bodyParser = require('body-parser');
-const db = require('./config/db.js');
 const express = require('express');
 const app = express();
 
@@ -14,6 +13,6 @@ app.use(bodyParser.json());
 require('./routes/product.routes.js')(app);
 
 // Listen for requests and logs in the console the current host and port.
-const server = app.listen(consts.port, consts.host, () => {
+let server = app.listen(consts.port, consts.host, () => {
   console.log(`Server is listening on port ${server.address().port} and host ${server.address().address}`);
 });
