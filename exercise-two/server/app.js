@@ -13,7 +13,5 @@ app.use(bodyParser.json());
 // Listen for requests and logs in the console the current host and port.
 require('./routes/product.routes.js')(app);
 const server = app.listen(consts.port, consts.host, () => {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log(`Server is listening on port ${port} and host ${host}`);
+  console.log(`Server is listening on port ${server.address().port} and host ${server.address().address}`);
 });
