@@ -1,16 +1,39 @@
 <section class="container-fluid bg-white textB text-center">
-  <div class="row">
-    <input type="text" [formControl]="search" class="form-control" id="search" name="search" placeholder="Type here..."
-           autofocus autocomplete>
-    <div class="row fadeInUp animated pad2">
-      <div *ngFor="let product of products" class="col-sm-6 col-md-4 borderB pad2">
-        <h4><b>Product ID:</b> {{product?.id}}</h4>
-        <h4><b>Product Name:</b> {{product?.name || uppercase}}</h4>
-        <h4><b>Stock:</b> {{product?.stock}}</h4>
-        <button class="btn mart1 hovered" (click)="deleteCertification(product?.id)">
-          <span class="glyphicon glyphicon-trash"></span> Delete
-        </button>
-      </div>
-    </div>
-  </div>
+	<div class="row fadeInUp animated ">
+		<div class="col-md-6 padlr2 mart1">
+			<p id="search-labeel"><b>Add as many products as you like!</b></p>
+			<add-comp (productsModified)="productsModified($event)"></add-comp>
+		</div>
+		<div class="col-md-6 padlr2 mart1">
+			<p id="search-label"><b>Search products by name</b></p>
+			<input type="text" [formControl]="search" class="form-control" id="search" name="search" placeholder="Type here..."
+				   autofocus autocomplete="false">
+			<br>
+			<b>Sort by: </b>
+			<button class="btn mart1 hovered" (click)="sortBy('name')">Name Asc</button>
+			<button class="btn mart1 hovered" (click)="sortBy('name-inv')">Name Desc</button>
+			<button class="btn mart1 hovered" (click)="sortBy('stock')">Stock Asc</button>
+			<button class="btn mart1 hovered" (click)="sortBy('stock-inv')">Stock Desc</button>
+		</div>
+	</div>
+	<div class="row fadeInUp animated pad2">
+		<div *ngFor="let product of products" class="col-sm-6 col-md-4 borderB pad2">
+			<h4><b>Product ID:</b> {{product?.id}}</h4>
+			<h4><b>Product Name:</b> {{product?.name || uppercase}}</h4>
+			<h4><b>Stock:</b> {{product?.stock}}</h4>
+			<h4>
+				<b>Modify Stock:</b>
+				<input type="number" [formControl]="stock" class="form-control inlineB maxW" id="stock" name="stock" placeholder="Number..."
+					   autofocus autocomplete="false">
+
+				<button class="btn hovered" title="Accept" (click)="updateStock(product?.id)">
+					<span class="glyphicon glyphicon-ok"></span>
+				</button>
+			</h4>
+			<button class="btn bg-red mart1 hovered" (click)="deleteProduct(product?.id)">
+				<span class="glyphicon glyphicon-trash"></span> Delete
+			</button>
+		</div>
+	</div>
 </section>
+

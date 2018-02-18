@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="marb1">
+	<div class="row">
+		<div class="col-xs-12 col-sm-4">
+			<div class="form-group has-feedback has-feedback-left">
+				<input type="text" [ngClass]="{'error-input': formErrors.name}"
+					   class="form-control"
+					   formControlName="name" id="name" name="name" placeholder="Name">
+				<em *ngIf="formErrors.name" class="error">{{formErrors.name}}</em>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-4">
+			<div class="form-group has-feedback has-feedback-left">
+				<input type="number" [ngClass]="{'error-input': formErrors.stock}"
+					   class="form-control" formControlName="stock" id="stock" name="stock"
+					   placeholder="Stock...">
+				<em *ngIf="formErrors.stock" class="error">{{formErrors.stock}}</em>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-4 marb2">
+			<button [disabled]="form.invalid" type="submit"
+					class="pull-left no-visible btn hovered" data-delay="1000"
+					data-animation="rubberBand">Accept
+			</button>
+		</div>
+	</div>
+</form>

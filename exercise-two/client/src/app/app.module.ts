@@ -13,6 +13,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AlertService} from './services/alert.service';
 import {WebService} from './services/web.service';
 import {ProductsComponent} from './components/products/products.component';
+import {AddComponent} from './components/add/add.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {ProductsComponent} from './components/products/products.component';
     FooterComponent,
     HomeComponent,
     AppComponent,
+    AddComponent,
     ProductsComponent
   ],
   imports: [

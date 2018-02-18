@@ -9,15 +9,15 @@ export class AlertService {
 
 	/**
 	 * This is a generic ok alert.
-	 * @param object the object with properties to be displayed.
+	 * @param object the object with properties to be displayed
 	 *
 	 * For e.g. To generate an warning for example pass 'warning' in type attribute.
 	 */
-	okAlert(object: any) {
+	okAlert(tit, tex, typ) {
 		swal({
-			title: object.title,
-			text: object.text,
-			type: object.type,
+			title: tit,
+			text: tex,
+			type: typ,
 			showCancelButton: false,
 			confirmButtonColor: '#3085d6',
 			cancelButtonColor: '#d33',

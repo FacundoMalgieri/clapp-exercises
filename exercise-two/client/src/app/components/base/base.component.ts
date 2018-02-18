@@ -38,8 +38,4 @@ export abstract class BaseComponent {
 	goTo(location: string): void {
 		window.location.hash = location;
 	}
-
-	scrollTo(element): void {
-		element.scrollIntoView({block: 'start', behavior: 'smooth'});
-	}
 }

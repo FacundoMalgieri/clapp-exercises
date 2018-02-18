@@ -7,7 +7,8 @@ const db = require('../services/db');
  * @param res the response object.
  */
 exports.add = (req, res) => {
-	if (!req.body.name || !req.body.stock) {
+	console.log(req.body);
+	if (!req.body.name) {
 		res.status(400).send({message: "Product fields can't be empty."});
 	} else {
 		let product = ({

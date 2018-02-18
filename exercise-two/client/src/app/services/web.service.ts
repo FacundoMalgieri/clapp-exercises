@@ -31,10 +31,7 @@ export class WebService {
    * @return {Observable<any>}
    */
   post(url: string, body: any) {
-    this.http.post(url, JSON.stringify(body)).subscribe(res => {
-      console.log(res)
-      return res;
-    });
+    return this.http.post(url, body);
   }
 
   /**
@@ -43,21 +40,14 @@ export class WebService {
    * @param body
    */
   put(url: string, body?: any) {
-    this.http.put(url, JSON.stringify(body)).subscribe(res => {
-      return res;
-    });
+    return this.http.put(url, body);
   }
 
   /**
    * This method performs a DELETE request to the API.
-   * @param {String} url - a partial path to the API.
-   * @param body
    */
-  delete(url: string, body?: any): any {
-    const params = new HttpParams().set(body.key, body.value);
-    this.http.delete(url, {params: params}).subscribe(res => {
-      return res;
-    });
+  delete(url: string): any {
+    this.http.delete(url).subscribe(res => res);
   }
 }
 
