@@ -29,7 +29,7 @@ You can test them with postman or from the client itself.
 
 ### Client
 Built with Angular, this client consumes the API to display products and manage the stock. Envolves all CRUD and sorting operations.
-To start using, just download and `npm install` all the dependencies and [here] (https://github.com/FacundoMalgieri/clapps-exercises/tree/master/exercise-two/client#client) 
-you can all the commands to start using.
+To start using, just download and `npm install` all the dependencies and [here](https://github.com/FacundoMalgieri/clapps-exercises/tree/master/exercise-two/client#client) 
+you can see all the commands to start using.
 
 
