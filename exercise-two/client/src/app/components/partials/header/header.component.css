@@ -1,0 +1,37 @@
+.navbar-default {
+	background: #06111f;
+	border: none;
+	border-radius: 0;
+}
+
+.navbar-nav>li>a, .navbar-brand {
+	color: #ffffff;
+}
+
+.navbar-toggle {
+	border: none;
+}
+.navbar-toggle:hover,
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus,
+.navbar-brand:hover,
+.navbar-brand:focus {
+	color: #3199ff !important;
+}
+
+.navbar-toggle:hover>span{
+	background-color: white !important;
+}
+
+.navbar-toggle:hover,
+.navbar-toggle:focus{
+	background-color: transparent;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: none;
+}
+
+nav{
+	margin-bottom: 0;
+}

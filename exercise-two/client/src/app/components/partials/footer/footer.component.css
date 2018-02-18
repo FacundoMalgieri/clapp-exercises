@@ -1,0 +1,20 @@
+#goTop {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+}
+
+#goTop:hover {
+  color: #B4D455;
+}
+
+h4, a {
+  color: black;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-bottom: 1%
+}

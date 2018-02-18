@@ -10,7 +10,7 @@
  * @param to  to which year you want to calculate. E.g 2000
  */
 const calculateSundays = (from, to) => {
-    const date = new Date(); // Create the Date object.
+    let date = new Date(); // Create the Date object.
     let month = 0, // Will be used in setFullYear which receives the 12 months from 0 - 11.
         year = from, // I copy the reference in order to keep my original "from" value to display later.
         array = []; // To save the dates and the length of the array.

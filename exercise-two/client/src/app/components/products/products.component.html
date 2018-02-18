@@ -1,0 +1,16 @@
+<section class="container-fluid bg-white textB text-center">
+  <div class="row">
+    <input type="text" [formControl]="search" class="form-control" id="search" name="search" placeholder="Type here..."
+           autofocus autocomplete>
+    <div class="row fadeInUp animated pad2">
+      <div *ngFor="let product of products" class="col-sm-6 col-md-4 borderB pad2">
+        <h4><b>Product ID:</b> {{product?.id}}</h4>
+        <h4><b>Product Name:</b> {{product?.name || uppercase}}</h4>
+        <h4><b>Stock:</b> {{product?.stock}}</h4>
+        <button class="btn mart1 hovered" (click)="deleteCertification(product?.id)">
+          <span class="glyphicon glyphicon-trash"></span> Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
