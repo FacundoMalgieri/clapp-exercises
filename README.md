@@ -12,7 +12,7 @@ This exercise is divided in two. The `server` and the `client`.
 
 ### Server
 Composed by a REST API and a MySQL DB. To get started, first you'll need [xampp](https://www.apachefriends.org/es/index.html) and install
-apache and MySQL, then start both services and get into [phpmyadmin](http://localhost/phpmyadmin) create a new database called `clapps
+apache and MySQL, then start both services, get into [phpmyadmin](http://localhost/phpmyadmin), create a new database called `clapps`
 and run the following query:
 
 ```sql
