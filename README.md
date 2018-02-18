@@ -4,11 +4,11 @@ This repository is to present a technical test to Clapps company. It's divided i
 You'll find every needed documentantion in the code itself.
 
 ## exercise-one
-To see how it works just copy and paste the code inside a browser console (f12) or run it in debugging mode in `Visual Studio Code` (f5)
+To see how it works just copy and paste the code inside a browser console (f12) or run it in debugging mode in Visual Studio Code (f5)
 
 ## exercise-two
 
-This exercise is divided in two. The `client` and the `server`. 
+This exercise is divided in two. The `server` and the `client`. 
 
 ### Server
 Composed by a REST API and a MySQL DB. To get started, first you'll need [xampp](https://www.apachefriends.org/es/index.html) and install
