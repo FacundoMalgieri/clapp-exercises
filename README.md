@@ -12,7 +12,7 @@ This exercise is divided in two. The `server` and the `client`.
 
 ### Server
 Composed by a REST API and a MySQL DB. To get started, first you'll need [xampp](https://www.apachefriends.org/es/index.html) and install
-apache and MySQL, then start both services and get into [phpmyadmin](http://localhost/phpmyadmin) create a new database called `clapps
+apache and MySQL, then start both services, get into [phpmyadmin](http://localhost/phpmyadmin), create a new database called `clapps`
 and run the following query:
 
 ```sql
@@ -28,8 +28,8 @@ available routes [here](https://github.com/FacundoMalgieri/clapps-exercises/blob
 You can test them with postman or from the client itself.
 
 ### Client
-Built with Angular, this client consumes the API to display products and manage the stock. Envolves all CRUD and sorting operations.
-To start using, just download and `npm install` all the dependencies and [here] (https://github.com/FacundoMalgieri/clapps-exercises/tree/master/exercise-two/client#client) 
-you can all the commands to start using.
+Built with Angular, this client is a fully responsive app that consumes the API to display products and manage the stock. Envolves all CRUD and sorting operations.
+To start using, just download and `npm install` all the dependencies and [here](https://github.com/FacundoMalgieri/clapps-exercises/tree/master/exercise-two/client#client) 
+you can see all the commands to start using.
 
 
