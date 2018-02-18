@@ -11,10 +11,8 @@ import {environment} from '../../../environments/environment';
 	styleUrls: ['add.component.css'],
 	selector: 'add-comp'
 })
-
 export class AddComponent {
 	@Output() productsModified = new EventEmitter<boolean>();
-
 	form: FormGroup;
 	formErrors = {'name': '', 'stock': ''};
 	validations = {
@@ -30,6 +28,9 @@ export class AddComponent {
 		this.createForm();
 	}
 
+	/**
+	 * A form creator with validations and subscription to changes in every input.
+	 */
 	createForm() {
 		this.form = this.fb.group({
 			name: ['', Validators.required],
@@ -59,12 +60,17 @@ export class AddComponent {
 		}
 	}
 
+	/**
+	 * When the form is submitted the web service sends the post req to the API
+	 * a sweet alert pops up and an event is emitted to the parent to let him know
+	 * that the products array has changed.
+	 */
 	onSubmit() {
 		this.ws.post(environment.baseUrl, this.form.value).subscribe(res => {
 			this.swal.okAlert('Success', 'The product was added.', 'success');
 			this.productsModified.emit(true);
 		}, err => {
-			this.swal.okAlert('Error', 'The product name already exists.', 'error');
+			if (err) this.swal.okAlert('Error', 'The product name already exists.', 'error');
 		});
 	}
 }

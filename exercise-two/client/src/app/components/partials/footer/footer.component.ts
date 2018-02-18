@@ -7,12 +7,11 @@ import * as $ from 'jquery';
 	templateUrl: 'footer.component.html',
 	styleUrls: ['footer.component.css']
 })
-
 export class FooterComponent implements AfterViewInit {
-  ngAfterViewInit(): void {
-    /**
-     * Go top scroll behaviour.
-     */
+	ngAfterViewInit(): void {
+		/**
+		 * Go top scroll behaviour.
+		 */
 		$(() => {
 			$(document).delegate('.top', 'click', (function () {
 				let target = $(this.hash);
